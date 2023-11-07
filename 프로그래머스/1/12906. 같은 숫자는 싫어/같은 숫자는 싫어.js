@@ -6,7 +6,5 @@ function solution(arr)
             answer.push(arr[i])
         } 
     }
-    
-    
     return answer;
 }
