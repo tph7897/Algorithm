@@ -2,15 +2,15 @@ function solution(array, n) {
     let answer = 0;
     let arr = array.map(i => Math.abs(i - n));
     let minValue = Math.min(...arr);
-    let minIndices = [];
+    let minIndex = [];
 
     for (let i = 0; i < array.length; i++) {
         if (arr[i] === minValue) {
-            minIndices.push(i);
+            minIndex.push(i);
         }
     }
 
-    minIndices.sort((a, b) => array[a] - array[b]);
+    minIndex.sort((a, b) => array[a] - array[b]);
     
-    return array[minIndices[0]];
+    return array[minIndex[0]];
 }
