@@ -1,1 +1,3 @@
-function solution(order) {return order.toString().split(/[369]/).length-1}
+function solution(order) {
+    return order.toString().split(/[369]/).length-1
+}
