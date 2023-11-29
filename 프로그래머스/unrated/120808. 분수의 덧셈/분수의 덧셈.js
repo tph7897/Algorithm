@@ -5,6 +5,7 @@ function solution(numer1, denom1, numer2, denom2) {
         if(numer%i == 0 && denom%i == 0){
             numer /= i
             denom/= i
+            break
         }
     }
     return [numer, denom];
