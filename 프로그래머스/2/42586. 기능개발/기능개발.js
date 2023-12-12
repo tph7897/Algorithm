@@ -11,6 +11,5 @@ function solution(progresses, speeds) {
             answer[++j] = 1;
         }
     }
-
     return answer;
 }
