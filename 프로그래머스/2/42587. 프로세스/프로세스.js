@@ -1,8 +1,7 @@
 function solution(priorities, location) {
     let answer = 0;
-    while (answer < priorities.length) {
-        let foundAnswer = false;
-
+    let foundAnswer = false;
+    while (!foundAnswer) {
         for (let i = 0; i < priorities.length; i++) {
             if (priorities[i] === Math.max(...priorities)) {
                 answer++;
@@ -14,10 +13,6 @@ function solution(priorities, location) {
             }
             // console.log(priorities);
         }
-        if (foundAnswer) {
-            break;
-        }
     }
-
     return answer;
 }
