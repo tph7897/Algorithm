@@ -9,7 +9,7 @@ function solution(bandage, health, attacks) {
         
         if(i==atTime[attack]){ // 몬스터 공격
             HP -= atDmg[attack]
-            if(HP < 1) break
+            if(HP < 1) break // 공격 받고 죽을때
             attack++
             heelTime = 0
         }else{ // 공격하지 않을때
@@ -24,7 +24,7 @@ function solution(bandage, health, attacks) {
             heelTime = 0
             HP += bandage[2]
         }
-        // console.log([i, HP, heelTime, order])
+        // console.log([i, HP, heelTime, order]) // 입출력 예와 동일
     }
     return HP > 0 ? HP : -1 ;
 }
