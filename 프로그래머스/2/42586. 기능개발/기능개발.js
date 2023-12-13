@@ -4,6 +4,7 @@ function solution(progresses, speeds) {
     let count = 0;
     progresses = progresses.map((e, i) => Math.ceil((100 - e) / speeds[i]));
     while (finish < progresses.length) {
+        
         progresses = progresses.map((e) => --e);
         while (progresses[finish] <= 0) {
             count++;
@@ -16,6 +17,7 @@ function solution(progresses, speeds) {
             answer.push(count);
             count = 0;
         }
+
     }
     return answer;
 }
