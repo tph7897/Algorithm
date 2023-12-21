@@ -1,3 +1,3 @@
 function solution(arr, k) {
-  return arr.map((num) => (k % 2 ? num * k : num + k));
+    return k % 2 ? arr.map(i => i * k) : arr.map(i => i + k);
 }
