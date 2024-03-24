@@ -9,3 +9,14 @@ function solution(n, slicer, num_list) {
         return num_list.slice(slicer[0], slicer[1]+1).filter((_,i)=>!(i%slicer[2]))
     }
 }
+
+const slices = {
+  1: (num_list, [a, b, c]) => num_list.slice(0, b + 1),
+  2: (num_list, [a, b, c]) => num_list.slice(a),
+  3: (num_list, [a, b, c]) => num_list.slice(a, b + 1),
+  4: (num_list, [a, b, c]) => num_list.slice(a, b + 1).filter((_, i) => i % c === 0),
+};
+
+function solution(n, slicer, num_list) {
+  return slices[n](num_list, slicer);
+}
