@@ -10,6 +10,8 @@ function solution(n, slicer, num_list) {
     }
 }
 
+//------------------------------------------------------------------------------------------
+
 const slices = {
   1: (num_list, [a, b, c]) => num_list.slice(0, b + 1),
   2: (num_list, [a, b, c]) => num_list.slice(a),
